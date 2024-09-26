@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        .d1{
+            background-color: lightslategrey;
+            display: flex;
+            align-items: center;
+            display: flex;
+            height: 3rem;
+            width: 92%;
+            border-radius:1rem;
+            margin-top: 1rem;
+            margin: 0.5rem auto;
+            border-radius:1 rem;
+            box-shadow: 0 0 2px gray;
+            color: cyan;
+        }
+        .tr{
+            width: 100%;
+            height: 20px;
+        }
+        tr{
+            text-align: center;
+            padding: 0%;
+        }
+        .b1{
+            background-color: aqua;
+            padding: 0.2rem 0.4rem;
+            font-size: large;
+            border-radius: 1.5rem;
+            width: 70px;
+            border: none;
+            box-shadow: 0 0 8px black;
+            height: 40px;
+
+        }
+        .calculator{
+            text-align: center;
+           
+        }
+        table{
+            width: 300px;
+            height: 500px;
+            border-radius: 1.5rem;
+            box-shadow: 0  0 12px gray;
+            margin: 0 auto;
+        }
+        body{
+            background-color: rgb(18, 30, 29);
+            padding-top: 6%;
+        }
+        @media screen and (max-width:400px) {
+            body{
+                padding-top: 10%;
+            }
+            table{
+                width: 250px;
+                height: 450px;
+            }
+        }
+    </style>
+    <script>
+        function fun1(x){
+            document.getElementById("m1").innerHTML+=x;
+        }
+        function fun2(){
+            document.getElementById("m1").innerHTML=" ";
+        }
+        function fun3(){
+         var x=   eval(document.getElementById("m1").innerHTML);
+         document.getElementById("m1").innerHTML=x;
+        }
+        function fun4(){
+            document.getElementById("m1").innerHTML=" ";
+
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+    <table >
+        <tr class="tr">
+            <td colspan="3" class="td"><div id="m1" class="d1"></div></td>
+        </tr>
+        <tr class="btn">
+            <td><button onclick="fun2()" class="b1">C</button></td>
+            <td><button onclick="fun1(1)" class="b1">1</button></td>
+            <td><button onclick="fun1(2)" class="b1">2</button></td>
+        </tr>
+        <tr class="btn">
+            <td><button onclick="fun1('+')" class="b1">+</button></td>
+            <td><button onclick="fun1(3)" class="b1">3</button></td>
+            <td><button onclick="fun1(4)" class="b1">4</button></td>
+        </tr>
+        <tr class="btn">
+            <td><button onclick="fun1('-')" class="b1">-</button></td>
+            <td><button onclick="fun1(5)" class="b1">5</button></td>
+            <td><button onclick="fun1(6)" class="b1">6</button></td>
+        </tr>
+        <tr class="btn">
+            <td><button onclick="fun1('*')" class="b1">*</button></td>
+            <td><button onclick="fun1(7)" class="b1">7</button></td>
+            <td><button onclick="fun1(8)" class="b1">8</button></td>
+        </tr>
+        <tr class="btn">
+            <td><button onclick="fun1('/')" class="b1">/</button></td>
+            <td><button onclick="fun1(9)" class="b1">9</button></td>
+            <td><button onclick="fun1(0)" class="b1">0</button></td>
+        </tr>
+        <tr class="btn">
+            <td><button onclick="fun1('%')" class="b1">%</button></td>
+            <td><button onclick="fun1('.')" class="b1">.</button></td>
+            <td><button onclick="fun3()" class="b1">=</button></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
